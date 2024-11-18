@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="lightcontact.css" id="theme-style">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Noto+Serif+JP&family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body data-html-file="contact">
+    <header>
+        <nav>
+            <img id="main-logo" class="logo" src="WebsitePics/bunnylogo.png">
+            <ul>
+                <a href="main.html">Main</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </ul>
+            <img src="WebsitePics/day-logo.png" id="mode-logo" onclick="switchTheme()" class="themeIcon">
+            <button id="loginBtn">Log in</button>
+        </nav>
+    </header>
+    <!---------loginform-------->
+
+    <div id="loginForm" class="form">
+        <div class="exitbtnn" id="loginExitBtn">
+            <img class="exitimg" src="WebsitePics/exit button.png">
+        </div>
+        <h2>Login</h2>
+        <form id="login" action="submit.php" method="post">
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p class="psignin">Don't have an account? <p id="signinBtn">Sign up<p></p>
+    </div>
+
+    <!-------register form-------->
+
+    <div id="registerForm" class="form">
+        <h2>Register</h2>
+        <form id="register" action="submit.php" method="post">
+            <input type="text" placeholder="Name" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <input type="password" placeholder="Confirm Password" required><br>
+            <button type="submit">Register</button>
+        </form>
+        <div class="exitbtnn" id="registerExitBtn">
+            <img class="exitimg"src="WebsitePics/exit button.png">
+        </div>
+    </div>
+
+    <!-----------------main------------section-------------->
+
+    <section class="sec1">
+        <div class="socialmedia-container">
+            <h1>visit us in different platforms</h1>
+            <div class="ig-cont">
+                <a href="instagram.com"><img class="socialicon" src="WebsitePics/instagram.png"></a>
+            </div>
+            <div class="fb-cont">
+                <a href="facebook.com"><img class="socialicon" src="WebsitePics/facebook.png"></a>
+            </div>
+            <div class="lin-cont">
+                <a href="linkedin.com"><img class="socialicon" src="WebsitePics/linkedin.png"></a>
+            </div>
+            <div class="yt-cont">
+                <a href="youtube.com"><img class="socialicon" src="WebsitePics/youtube.png"></a>
+            </div>
+            <div class="copyright-cont">
+                <div class="copy-logo-cont"><img class="copy-logo" src="WebsitePics/copyright.png"></div>
+                <div class="copy-text">Bunny's Bakery has only one location </div>
+            </div>
+        </div>
+    </section>
+    <script src="logs.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+body {
+    background-image: url(WebsitePics/welcomebackk.jpg);
+    background-position: center;
+    background-size: cover;
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    height: 100%;
+    background-image: url(WebsitePics/welcomebackk.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+}
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.background-div {
+    background-image: url(WebsitePics/welcomebackk.jpg);
+    width: 640px;
+    height: 424px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 0;
+    border-radius: 30px;
+}
+.welcome-button {
+    position: absolute;
+    left: 50%;
+    top: 61%;
+    transform: translate(-50%,-50%);
+    padding: 8px 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-width: 1px;
+    border-radius: 7px;
+    font-size: larger;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+.anchor {
+    text-decoration: none;
+    color: #ca1442;
+    font-size: larger;
+}
+.welcomelogo{
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 35px;
+}

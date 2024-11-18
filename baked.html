@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=bagels">
+    <title>Baked Menu</title>
+    <link id="theme-style" rel="stylesheet" href="lightbaked.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Noto+Serif+JP&family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="full-background-container"></div>
+    <header>
+        <nav>
+            <img id="main-logo" class="logo" src="WebsitePics/bunnylogo.png">
+            <ul>
+                <a href="main.html">Main</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact.html">Contact</a>
+                <a id="#">Events</a>
+            </ul>
+            <img src="WebsitePics/day-logo.png" id="mode-logo" onclick="switchTheme()" class="themeIcon">
+            <button id="loginBtn">Log in</button>
+        </nav>
+    </header>
+    <!---------loginform-------->
+
+    <div id="loginForm" class="form">
+        <div class="exitbtnn" id="loginExitBtn">
+            <img class="exitimg" src="WebsitePics/exit button.png">
+        </div>
+        <h2>Login</h2>
+        <form id="login" action="submit.php" method="post">
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p class="psignin">Don't have an account? <p id="signinBtn">Sign up<p></p>
+    </div>
+
+    <!-------register form-------->
+
+    <div id="registerForm" class="form">
+        <h2>Register</h2>
+        <form id="register" action="submit.php" method="post">
+            <input type="text" placeholder="Name" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <input type="password" placeholder="Confirm Password" required><br>
+            <button type="submit">Register</button>
+        </form>
+        <div class="exitbtnn" id="registerExitBtn">
+            <img class="exitimg"src="WebsitePics/exit button.png">
+        </div>
+    </div>
+    <h1 class="category-title">everything we bake</h1>
+    <section id="produit" class="sec-3">
+        <div class="all-product">
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('baguette')" class="product-pic" src="WebsitePics/baguettes.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Baguettes</p>
+                    <p class="p1">Experience the classic taste of our baguettes.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">15da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('baguette')">-</button><button class="buy-but" onclick="addToBasket('baguette',15)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('brioche')" class="product-pic" src="WebsitePics/brioche.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Brioche</p>
+                    <p class="p1">Indulge in the buttery goodness of our brioche.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">30da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('brioche')">-</button><button class="buy-but" onclick="addToBasket('brioche',30)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('wheatbread')" class="product-pic" src="WebsitePics/whole wheat bread.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Whole Wheat Bread</p>
+                    <p class="p1">Enjoy our wholesome whole wheat bread.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">30da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('wheat bread')">-</button><button class="buy-but" onclick="addToBasket('wheat bread',30)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('ryebread')" class="product-pic" src="WebsitePics/rye bread.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Rye Bread</p>
+                    <p class="p1">Savor the robust flavor of our rye bread.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">40da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('rye bread')">-</button><button class="buy-but" onclick="addToBasket('rye bread',40)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('challah')" class="product-pic" src="WebsitePics/multigrain.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Challah</p>
+                    <p class="p1">Delight in the soft and fluffy texture of our challah.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">35da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('challah')">-</button><button class="buy-but" onclick="addToBasket('challah',35)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('cornbread')" class="product-pic" src="WebsitePics/corn bread.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Corn Bread</p>
+                    <p class="p1">Taste the sweet and savory flavors of our cornbread.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">50da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('corn bread')">-</button><button class="buy-but" onclick="addToBasket('corn bread',50)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('flatbread')" class="product-pic" src="WebsitePics/flatbread.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Flatbread</p>
+                    <p class="p1">Enjoy the versatility of our crispy flatbread.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">20da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('flatbread')">-</button><button class="buy-but" onclick="addToBasket('flatbread',20)">+</button></div>
+                </div>
+            </div>
+            <div class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('sodabread')" class="product-pic" src="WebsitePics/irish soda bread.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Irish Soda Bread</p>
+                    <p class="p1">Taste tradition with our Irish soda bread.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">40da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('irish bread')">-</button><button class="buy-but" onclick="addToBasket('irish bread',40)">+</button></div>
+                </div>
+            </div>
+            <div class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('pitabread')" class="product-pic" src="WebsitePics/pita bread.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Pita Bread</p>
+                    <p class="product-text">Explore Mediterranean flavors with our soft pita bread.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">30da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('pita bread')">-</button><button class="buy-but" onclick="addToBasket('pita bread',30)">+</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="nextprev-container">
+            <button class="nextprevbtn" id="prevbtn">previous</button>
+            <button class="nextprevbtn" id="nextbtn">next</button>
+            </div>
+    </section>
+    <div id="basket" class="baskett">
+        <button class="basket-reset-but" id="resetButton" onclick="resetBasket()"><img class="basket-exit-img" src="WebsitePics/exit button.png"></button>
+        <h3>basket</h3>
+        <ul id="basket-items">
+            
+        </ul>
+        <p class="basket-text">Total Price: <span id="total-price">$0</span></p>
+    </div>
+    <section>
+        <div class="wrapper">
+            <div class="container">
+                <!--first slide-->
+                <input class="inputs" type="radio" name="slide" id="c1">
+                    <label for="c1" class="card">
+                        <div class="row">
+                            <div class="icon">1</div>
+                            <div class="description">
+                                <h4><a href="sugaries.html">sugaries</a></h4>
+                                <p>indulge in our sweet delights, crafted with care</p>
+                            </div>
+                        </div>
+                    </label>
+                <!--second slide-->
+                    <input class="inputs" type="radio" name="slide" id="c2">
+                    <label for="c2" class="card">
+                        <div class="row">
+                            <div class="icon">2</div>
+                            <div class="description">
+                                <h4><a href="salties.html">salties</a></h4>
+                                <p>savor the savory goodness od our delectable creations</p>
+                            </div>
+                        </div>
+                    </label>
+                <!--third slide-->
+                <input class="inputs" type="radio" name="slide" id="c3">
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                        <div class="description">
+                            <h4><a href="cakes.html">cakes</a></h4>
+                            <p>celebrate life's moment with our exquisite cakes, baked to perfection</p>
+                        </div>
+                    </div>
+                </label>
+                <!--fifth slide-->
+                <input class="inputs" type="radio" name="slide" id="c4">
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">4</div>
+                        <div class="description">
+                            <h4><a href="custom.html">custom ?</a></h4>
+                            <p>bring your vision to life with our bespoke creations tailored just for you</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </section>
+    <div class="product-details" id="baguette-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('baguette-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/baguettes.jpg">
+        <h2 class="detail-text">baguette's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 400cal</p>
+        <p class="detail-info">Total Fat: 20g</p>
+        <p class="detail-info">Protein 5g</p>
+        <p class="detail-info">Total Carbohydrate 50 g</p>
+    </div>
+    <div class="product-details" id="brioche-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('brioche-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/brioche.jpg">
+        <h2 class="detail-text">brioche's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 400cal</p>
+        <p class="detail-info">Total Fat: 20g</p>
+        <p class="detail-info">Protein 5g</p>
+        <p class="detail-info">Total Carbohydrate 50 g</p>
+    </div>
+    <div class="product-details" id="wheatbread-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('wheatbread-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/whole wheat bread.jpg">
+        <h2 class="detail-text">whole wheat bread's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 400cal</p>
+        <p class="detail-info">Total Fat: 20g</p>
+        <p class="detail-info">Protein 5g</p>
+        <p class="detail-info">Total Carbohydrate 50 g</p>
+    </div>
+    <div class="product-details" id="ryebread-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('ryebread-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/rye bread.jpg">
+        <h2 class="detail-text">rye bread's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 400cal</p>
+        <p class="detail-info">Total Fat: 20g</p>
+        <p class="detail-info">Protein 5g</p>
+        <p class="detail-info">Total Carbohydrate 50 g</p>
+    </div>
+    <div class="product-details" id="challah-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('challah-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/multigrain.jpg">
+        <h2 class="detail-text">challah's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 400cal</p>
+        <p class="detail-info">Total Fat: 20g</p>
+        <p class="detail-info">Protein 5g</p>
+        <p class="detail-info">Total Carbohydrate 50 g</p>
+    </div>
+    <div class="product-details" id="cornbread-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('cornbread-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/corn bread.jpg">
+        <h2 class="detail-text">corn bread's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 400cal</p>
+        <p class="detail-info">Total Fat: 20g</p>
+        <p class="detail-info">Protein 5g</p>
+        <p class="detail-info">Total Carbohydrate 50 g</p>
+    </div>
+    <div class="product-details" id="flatbread-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('flatbread-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/flatbread.jpg">
+        <h2 class="detail-text">flatbread's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 400cal</p>
+        <p class="detail-info">Total Fat: 20g</p>
+        <p class="detail-info">Protein 5g</p>
+        <p class="detail-info">Total Carbohydrate 50 g</p>
+    </div>
+    <div class="product-details" id="sodabread-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('sodabread-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/irish soda bread.jpg">
+        <h2 class="detail-text">irish soda bread's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 400cal</p>
+        <p class="detail-info">Total Fat: 20g</p>
+        <p class="detail-info">Protein 5g</p>
+        <p class="detail-info">Total Carbohydrate 50 g</p>
+    </div>
+    <div class="product-details" id="pitabread-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('pitabread-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/pita bread.jpg">
+        <h2 class="detail-text">pitabread's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 400cal</p>
+        <p class="detail-info">Total Fat: 20g</p>
+        <p class="detail-info">Protein 5g</p>
+        <p class="detail-info">Total Carbohydrate 50 g</p>
+    </div>
+    <script src="shop.js"></script>
+    <script src="logs.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>

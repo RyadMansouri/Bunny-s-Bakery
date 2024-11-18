@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link id="theme-style" rel="stylesheet" href="lightfaq.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Noto+Serif+JP&family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <img id="main-logo" class="logo" src="WebsitePics/bunnylogo.png">
+            <ul>
+                <a href="main.html">Main</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </ul>
+            <img src="WebsitePics/day-logo.png" id="mode-logo" onclick="switchTheme()" class="themeIcon">
+            <button id="loginBtn">Log in</button>
+        </nav>
+    </header>
+
+    <!---------loginform-------->
+
+    <div id="loginForm" class="form">
+        <div class="exitbtnn" id="loginExitBtn">
+            <img class="exitimg" src="WebsitePics/exit button.png">
+        </div>
+        <h2>Login</h2>
+        <form id="login" action="submit.php" method="post">
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p class="psignin">Don't have an account? <p id="signinBtn">Sign up<p></p>
+    </div>
+
+    <!-------register form-------->
+
+    <div id="registerForm" class="form">
+        <h2>Register</h2>
+        <form id="register" action="submit.php" method="post">
+            <input type="text" placeholder="Name" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <input type="password" placeholder="Confirm Password" required><br>
+            <button type="submit">Register</button>
+        </form>
+        <div class="exitbtnn" id="registerExitBtn">
+            <img class="exitimg"src="WebsitePics/exit button.png">
+        </div>
+    </div>
+    <script src="logs.js"></script>
+    <script src="theme.js"></script>
+
+  
+  <!-- ===================================================== -->
+
+  <div class="wrapper">
+    <h1>Frequently Asked Questions</h1>
+
+    <div class="faq">
+      <button class="accordion">
+        1. What types of products do you offer?
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAMdJREFUSEvtlI0JgzAQhZ+TVDfpKO0m7STtJu0mdZTmgQciej8GtdALCELO+/K+mDQ4aDQHcZHg3cyn6lS9mYGf/7laAL0z/hnA26r1JGajF4B7aXYzGj7KAi8ArgCeWq0H/ClNmJhDgwuUdbTT1YIJZWINPoUysarbk5gL1+BhKBt6wUvw07CnotdMKvoj4Dm49OGeuqHRxAKZag9D14LHyfkeSrpW9fiEMDkf87KYO1bRPbYuJPd8gt2qagtTda1B9/f/p/oL1IkhH6ERyFgAAAAASUVORK5CYII="/>
+      </button>
+      <div class="pannel">
+        <p>
+            We offer a variety of homemade products, including savory dishes such as quiches and pizzas, sweet treats like cakes and cookies, as well as fresh bread.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        2. Can I order custom cakes for special events?
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAMdJREFUSEvtlI0JgzAQhZ+TVDfpKO0m7STtJu0mdZTmgQciej8GtdALCELO+/K+mDQ4aDQHcZHg3cyn6lS9mYGf/7laAL0z/hnA26r1JGajF4B7aXYzGj7KAi8ArgCeWq0H/ClNmJhDgwuUdbTT1YIJZWINPoUysarbk5gL1+BhKBt6wUvw07CnotdMKvoj4Dm49OGeuqHRxAKZag9D14LHyfkeSrpW9fiEMDkf87KYO1bRPbYuJPd8gt2qagtTda1B9/f/p/oL1IkhH6ERyFgAAAAASUVORK5CYII="/>
+      </button>
+      <div class="pannel">
+        <p>
+            Absolutely! We love customizing cakes for birthdays, weddings, and other special occasions. Contact us to discuss your needs and ideas.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        3. How can I place an order?
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAMdJREFUSEvtlI0JgzAQhZ+TVDfpKO0m7STtJu0mdZTmgQciej8GtdALCELO+/K+mDQ4aDQHcZHg3cyn6lS9mYGf/7laAL0z/hnA26r1JGajF4B7aXYzGj7KAi8ArgCeWq0H/ClNmJhDgwuUdbTT1YIJZWINPoUysarbk5gL1+BhKBt6wUvw07CnotdMKvoj4Dm49OGeuqHRxAKZag9D14LHyfkeSrpW9fiEMDkf87KYO1bRPbYuJPd8gt2qagtTda1B9/f/p/oL1IkhH6ERyFgAAAAASUVORK5CYII="/>
+      </button>
+      <div class="pannel">
+        <p>
+            You can place an order online through our website or by calling us directly. Be sure to place your order in advance to ensure product availability.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        4. What is your delivery policy?
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAMdJREFUSEvtlI0JgzAQhZ+TVDfpKO0m7STtJu0mdZTmgQciej8GtdALCELO+/K+mDQ4aDQHcZHg3cyn6lS9mYGf/7laAL0z/hnA26r1JGajF4B7aXYzGj7KAi8ArgCeWq0H/ClNmJhDgwuUdbTT1YIJZWINPoUysarbk5gL1+BhKBt6wUvw07CnotdMKvoj4Dm49OGeuqHRxAKZag9D14LHyfkeSrpW9fiEMDkf87KYO1bRPbYuJPd8gt2qagtTda1B9/f/p/oL1IkhH6ERyFgAAAAASUVORK5CYII="/>
+      </button>
+      <div class="pannel">
+        <p>
+            We offer deliveries within certain provinces as well as outside the province, depending on availability. Please contact us for more information on delivery areas and associated fees.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        5. Can I request same-day delivery?
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAMdJREFUSEvtlI0JgzAQhZ+TVDfpKO0m7STtJu0mdZTmgQciej8GtdALCELO+/K+mDQ4aDQHcZHg3cyn6lS9mYGf/7laAL0z/hnA26r1JGajF4B7aXYzGj7KAi8ArgCeWq0H/ClNmJhDgwuUdbTT1YIJZWINPoUysarbk5gL1+BhKBt6wUvw07CnotdMKvoj4Dm49OGeuqHRxAKZag9D14LHyfkeSrpW9fiEMDkf87KYO1bRPbYuJPd8gt2qagtTda1B9/f/p/oL1IkhH6ERyFgAAAAASUVORK5CYII="/>
+      </button>
+      <div class="pannel">
+        <p>
+            Same-day deliveries are possible subject to availability. We recommend placing your order as early as possible to ensure delivery feasibility.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <button class="accordion">
+        6. Do you accept online payments?
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAMdJREFUSEvtlI0JgzAQhZ+TVDfpKO0m7STtJu0mdZTmgQciej8GtdALCELO+/K+mDQ4aDQHcZHg3cyn6lS9mYGf/7laAL0z/hnA26r1JGajF4B7aXYzGj7KAi8ArgCeWq0H/ClNmJhDgwuUdbTT1YIJZWINPoUysarbk5gL1+BhKBt6wUvw07CnotdMKvoj4Dm49OGeuqHRxAKZag9D14LHyfkeSrpW9fiEMDkf87KYO1bRPbYuJPd8gt2qagtTda1B9/f/p/oL1IkhH6ERyFgAAAAASUVORK5CYII="/>
+      </button>
+      <div class="pannel">
+        <p>
+            Yes, we accept online payments through our secure website. You can also choose to pay cash on delivery.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        this.parentElement.classList.toggle("active");
+
+        var pannel = this.nextElementSibling;
+
+        if (pannel.style.display === "block") {
+          pannel.style.display = "none";
+        } else {
+          pannel.style.display = "block";
+        }
+      });
+    }
+  </script>
+</body>
+</html>

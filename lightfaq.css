@@ -1,0 +1,239 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fcd5ce;
+}
+header {
+    background-image: url(WebsitePics/headerrbackkk.jpg);
+    background-position:center;
+    width: 100%;
+    height: 90px;
+}
+.logo {
+    width: 75px;
+    height: 70px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+nav ul{
+    margin-top: 25px;
+    margin: 30px;
+}
+nav ul a {
+    margin-left: 50px;
+    font-size: x-large;
+    font-family: "Kufam" , sans-serif;
+    text-decoration: none;
+    color: #ca1442;
+    transition: 0.4s;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+nav ul a:hover {
+    background-color: rgb(255, 104, 104);
+}
+.themeIcon {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#loginBtn {
+    margin-right: 30px;
+    padding: 8px 13px;
+    height: 40px;
+    margin-top: 25px;
+    border-width: 1px;
+    background-color: rgba(0, 0, 0, 0.1);;
+    border-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: larger;
+}
+.form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.35);
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#loginForm {
+    width: 300px;
+    border-radius: 10px;
+}
+
+#registerForm {
+    width: 400px;
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #0056b3;
+}
+@media (max-width: 768px) {
+    body {
+         font-size: 14px;
+     }
+ 
+     header {
+         flex-direction: column;
+     }
+ 
+    .logo {
+         width: 80px;
+     }
+ 
+     nav ul li {
+         margin-right: 10px;
+     }
+ 
+    .form h2 {
+         font-size: 20px;
+     }
+ 
+    .form input[type="text"],
+    .form input[type="email"],
+    .form input[type="password"] {
+         font-size: 14px;
+     }
+ 
+    .form button[type="submit"] {
+         font-size: 14px;
+     }
+ 
+    .faq-item {
+         width: 100%;
+     }
+ }
+
+.psignin {
+    text-align: center;
+    margin-top: 20px;
+}
+#loginExitBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#registerExitBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer; 
+}
+.exitbtnn {
+    width: 20px;
+    margin: 0;
+    padding: 0;
+}
+.exitimg {
+    width: 100%;
+    margin: 0;
+}
+.exitlogo {
+    margin: 0;
+    padding: 0;
+}
+#signinBtn{
+    color: #ca1442;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.8s;
+    display: inline;
+}
+
+
+/* ============================================ */
+.wrapper {
+    max-width: 75%;
+    margin: auto;
+  }
+  
+  .wrapper > h1 {
+    margin: 1.5rem 0;
+    text-align: center;
+   letter-spacing: 3px;
+}
+  
+  .accordion {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  
+  
+  .active,
+  .accordion:hover {
+    background-color: #f1f7f5;
+  }
+  .pannel {
+    padding: 0 2rem 2.5rem 2rem;
+    background-color: white;
+    overflow: hidden;
+    background-color: #f1f7f5;
+    display: none;
+  }
+  .pannel p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  
+  .faq {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+  }
+  .faq.active {
+    border: none;
+  }
+  

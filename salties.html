@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salties Menu</title>
+    <link id="theme-style" rel="stylesheet" href="lightsalties.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Noto+Serif+JP&family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="full-background-container"></div>
+    <header>
+        <nav>
+            <img id="main-logo" class="logo" src="WebsitePics/bunnylogo.png">
+            <ul>
+                <a href="main.html">Main</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </ul>
+            <img src="WebsitePics/day-logo.png" id="mode-logo" onclick="switchTheme()" class="themeIcon">
+            <button id="loginBtn">Log in</button>
+        </nav>
+    </header>
+    <!---------loginform-------->
+
+    <div id="loginForm" class="form">
+        <div class="exitbtnn" id="loginExitBtn">
+            <img class="exitimg" src="WebsitePics/exit button.png">
+        </div>
+        <h2>Login</h2>
+        <form id="login" action="submit.php" method="post">
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p class="psignin">Don't have an account? <p id="signinBtn">Sign up<p></p>
+    </div>
+
+    <!-------register form-------->
+
+    <div id="registerForm" class="form">
+        <h2>Register</h2>
+        <form id="register" action="submit.php" method="post">
+            <input type="text" placeholder="Name" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <input type="password" placeholder="Confirm Password" required><br>
+            <button type="submit">Register</button>
+        </form>
+        <div class="exitbtnn" id="registerExitBtn">
+            <img class="exitimg"src="WebsitePics/exit button.png">
+        </div>
+    </div>
+    <h1 class="category-title">Our Salties Menu</h1>
+    <section id="produit" class="sec-3">
+        <div class="all-product">
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('fretzel')" class="product-pic" src="WebsitePics/fretzelspic.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Fretzels</p>
+                    <p class="p1">Crunch into our savory pretzels.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">100da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('fretzels')">-</button><button class="buy-but" onclick="addToBasket('fretzels',100)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('bagel')" class="product-pic" src="WebsitePics/bagels.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Bagels</p>
+                    <p class="p1">Start your morning with our freshly baked bagels.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">50da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('bagels')">-</button><button class="buy-but" onclick="addToBasket('bagels',50)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('facacciabread')" class="product-pic" src="WebsitePics/facaccia bread pic.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Facaccia Bread</p>
+                    <p class="p1">Enjoy the flavors of Italy with our focaccia bread.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">600da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('facaccia bread')">-</button><button class="buy-but" onclick="addToBasket('facaccia bread',60)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('pizzaroll')" class="product-pic" src="WebsitePics/piza rolls.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Pizza Rolls</p>
+                    <p class="p1">Taste the convenience of our savory pizza rolls.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">90da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('pizza rolls')">-</button><button class="buy-but" onclick="addToBasket('pizza rolls',90)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('breadstick')" class="product-pic" src="WebsitePics/bread sticks.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Bread Sticks</p>
+                    <p class="p1">Crunch on our crispy seasoned bread sticks.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">15da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('bread sticks')">-</button><button class="buy-but" onclick="addToBasket('bread sticks',15)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('savorytartlet')" class="product-pic" src="WebsitePics/savory tartlet.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Savory Tartlets</p>
+                    <p class="p1">Indulge in our savory-filled tartlets.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">40da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('savory tartlets')">-</button><button class="buy-but" onclick="addToBasket('savory tartlets',40)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('cracker')" class="product-pic" src="WebsitePics/cracker.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Cracker</p>
+                    <p class="p1">Elevate your snacking with our crispy crackers.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">10da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('cracker')">-</button><button class="buy-but" onclick="addToBasket('cracker',10)">+</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="nextprev-container">
+        <button class="nextprevbtn" id="prevbtn">previous</button>
+        <button class="nextprevbtn" id="nextbtn">next</button>
+        </div>
+    </section>
+    <div id="basket" class="baskett">
+        <button class="basket-reset-but" id="resetButton" onclick="resetBasket()"><img class="basket-exit-img" src="WebsitePics/exit button.png"></button>
+        <h3>basket</h3>
+        <ul id="basket-items">
+            
+        </ul>
+        <p class="basket-text">Total Price: <span id="total-price">$0</span></p>
+    </div>
+    <section>
+        <div class="wrapper">
+            <div class="container">
+                <!--first slide-->
+                <input class="inputs" type="radio" name="slide" id="c1">
+                    <label for="c1" class="card">
+                        <div class="row">
+                            <div class="icon">1</div>
+                            <div class="description">
+                                <h4><a href="sugaries.html">sugaries</a></h4>
+                                <p>indulge in our sweet delights, crafted with care</p>
+                            </div>
+                        </div>
+                    </label>
+                <!--second slide-->
+                <input class="inputs" type="radio" name="slide" id="c2">
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                        <div class="description">
+                            <h4><a href="baked.html">baked</a></h4>
+                            <p>experience the warmth and comfort of freshly baked treats</p>
+                        </div>
+                    </div>
+                </label>
+                <!--third slide-->
+                <input class="inputs" type="radio" name="slide" id="c3">
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                        <div class="description">
+                            <h4><a href="cakes.html">cakes</a></h4>
+                            <p>celebrate life's moment with our exquisite cakes, baked to perfection</p>
+                        </div>
+                    </div>
+                </label>
+                <!--fourth slide-->
+                <input class="inputs" type="radio" name="slide" id="c4">
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">4</div>
+                        <div class="description">
+                            <h4><a href="custom.html">custom ?</a></h4>
+                            <p>bring your vision to life with our bespoke creations tailored just for you</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </section>
+    <div class="product-details" id="fretzel-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('fretzel-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/fretzelspic.jpg">
+        <h2 class="detail-text">fretzel's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 400cal</p>
+        <p class="detail-info">Total Fat: 20g</p>
+        <p class="detail-info">Protein 5g</p>
+        <p class="detail-info">Total Carbohydrate 50 g</p>
+    </div>
+    <div class="product-details" id="bagel-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('bagel-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/bagels.jpg">
+        <h2 class="detail-text">bagel's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 350kcal</p>
+        <p class="detail-info">Total Fat: 15g</p>
+        <p class="detail-info">Protein 4g</p>
+        <p class="detail-info">Total Carbohydrate 45g</p>
+    </div>
+    <div class="product-details" id="facacciabread-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('facacciabread-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/facaccia bread pic.jpg">
+        <h2 class="detail-text">facaccia bread's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 380</p>
+        <p class="detail-info">Total Fat: 10g</p>
+        <p class="detail-info">Protein: 5g</p>
+        <p class="detail-info">Total Carbohydrate: 45g</p>
+    </div>
+    <div class="product-details" id="pizzaroll-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('pizzaroll-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/piza rolls.jpg">
+        <h2 class="detail-text">pizzaroll's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 300</p>
+        <p class="detail-info">Total Fat: 10g</p>
+        <p class="detail-info">Protein 5g</p>
+        <p class="detail-info">Total Carbohydrate  g</p>
+    </div>
+    <div class="product-details" id="breadstick-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('breadstick-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/bread sticks.jpg">
+        <h2 class="detail-text">breadstick's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 250</p>
+        <p class="detail-info">Total Fat: 15g</p>
+        <p class="detail-info">Protein 4 g</p>
+        <p class="detail-info">Total Carbohydrate 30 g</p>
+    </div>
+    <div class="product-details" id="savorytartlet-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('savorytartlet-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/savory tartlet.jpg">
+        <h2 class="detail-text">savory tartlet's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 320</p>
+        <p class="detail-info">Total Fat: 12g</p>
+        <p class="detail-info">Protein 3 g</p>
+        <p class="detail-info">Total Carbohydrate 40 g</p>
+    </div>
+    <div class="product-details" id="cracker-details">
+        <div class="exit-detail-img-cont"><img onclick="hideProductDetails('cracker-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+        <img class="detail-pic" src="WebsitePics/cracker.jpg">
+        <h2 class="detail-text">cracker's Nutrition Per 100g</h2>
+        <p class="detail-info">Calories: 420</p>
+        <p class="detail-info">Total Fat: 25g</p>
+        <p class="detail-info">Protein 6 g</p>
+        <p class="detail-info">Total Carbohydrate 40 g</p>
+    </div>
+    <script src="shop.js"></script>
+    <script src="theme.js"></script>
+    <script src="logs.js"></script>
+</body>
+</html>

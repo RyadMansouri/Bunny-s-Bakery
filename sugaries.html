@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugaries Menu</title>
+    <link id="theme-style" rel="stylesheet" href="lightsugaries.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Dosis:wght@200..800&family=Noto+Serif+JP&family=Whisper&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="full-background-container"></div>
+    <header>
+        <nav>
+            <img id="main-logo" class="logo" src="WebsitePics/bunnylogo.png">
+            <ul>
+                <a href="main.html">Main</a>
+                <a href="menu.html">Menu</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+            </ul>
+            <img src="WebsitePics/day-logo.png" id="mode-logo" onclick="switchTheme()" class="themeIcon">
+            <button id="loginBtn">Log in</button>
+        </nav>
+    </header>
+    <!---------loginform-------->
+
+    <div id="loginForm" class="form">
+        <div class="exitbtnn" id="loginExitBtn">
+            <img class="exitimg" src="WebsitePics/exit button.png">
+        </div>
+        <h2>Login</h2>
+        <form id="login" action="submit.php" method="post">
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+        <p class="psignin">Don't have an account? <p id="signinBtn">Sign up<p></p>
+    </div>
+
+    <!-------register form-------->
+
+    <div id="registerForm" class="form">
+        <h2>Register</h2>
+        <form id="register" action="submit.php" method="post">
+            <input type="text" placeholder="Name" required><br>
+            <input type="email" placeholder="Email" required><br>
+            <input type="password" placeholder="Password" required><br>
+            <input type="password" placeholder="Confirm Password" required><br>
+            <button type="submit">Register</button>
+        </form>
+        <div class="exitbtnn" id="registerExitBtn">
+            <img class="exitimg"src="WebsitePics/exit button.png">
+        </div>
+    </div>
+    <h1 class="category-title">Our Sugaries Menu</h1>
+    <section id="produit" class="sec-3">
+        <div class="all-product">
+            <div class="product slide">
+                <div>
+                    <img onclick="showProductDetails('cookie')" class="product-pic" src="WebsitePics/cookiespic.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Cookies</p>
+                    <p class="p1">Enjoy our irresistible cookies, baked to perfection.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">100da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('cookies')">-</button><button class="buy-but" onclick="addToBasket('cookies',100)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick="showProductDetails('donut')" class="product-pic" src="WebsitePics/donutpic.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Donuts</p>
+                    <p class="p1">Indulge in our heavenly glazed donuts.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">250da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('donuts')">-</button><button class="buy-but" onclick="addToBasket('donuts',250)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick="showProductDetails('brownie')" class="product-pic" src="WebsitePics/brownies.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Brownies</p>
+                    <p class="p1">Dive into our rich and fudgy brownies.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">150da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('brownies')">-</button><button class="buy-but" onclick="addToBasket('brownies',150)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('muffin')" class="product-pic" src="WebsitePics/muffins.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Muffins</p>
+                    <p class="p1">Start your day with our moist and flavorful muffins.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">100da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('muffins')">-</button><button class="buy-but" onclick="addToBasket('muffins',100)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('eclair')" class="product-pic" src="WebsitePics/éclair pic.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Eclair</p>
+                    <p class="p1">Treat yourself to our creamy-filled eclairs.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">120da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('éclair')">-</button><button class="buy-but" onclick="addToBasket('éclair',120)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('cinnamonbun')" class="product-pic" src="WebsitePics/cinnamon buns.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Cinnamon Buns</p>
+                    <p class="p1">Delight in our warm and gooey cinnamon buns.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">150da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('Cinnamon buns')">-</button><button class="buy-but" onclick="addToBasket('Cinnamon buns',150)">+</button></div>
+                </div>
+            </div>
+            <div  class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('chocolateball')" class="product-pic" src="WebsitePics/chocolate balls.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Chocolate Balls</p>
+                    <p class="p1">Savor our decadent chocolate balls.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">50da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('Chocolate balls')">-</button><button class="buy-but" onclick="addToBasket('Chocolate balls',50)">+</button></div>
+                </div>
+            </div>
+            <div class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('fruittart')" class="product-pic" src="WebsitePics/fruit tart.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Fruit Tart</p>
+                    <p class="p1">Taste the perfect balance of sweet and tangy.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">200da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('fruit tart')">-</button><button class="buy-but" onclick="addToBasket('fruit tart',200)">+</button></div>
+                </div>
+            </div>
+            <div class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('macaron')" class="product-pic" src="WebsitePics/macarons-stacked.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Macarons</p>
+                    <p class="product-text">Experience the delicate flavors of our French macarons.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">100da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('macarons')">-</button><button class="buy-but" onclick="addToBasket('macarons',100)">+</button></div>
+                </div>
+            </div>
+            <div class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('cupcake')" class="product-pic" src="WebsitePics/cupcakes.jpg">
+                </div>
+                <div>
+                    <p class="product-name">CupCakes</p>
+                    <p class="product-text"> Indulge in our delectable frosted cupcakes.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">80da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('Cup cakes')">-</button><button class="buy-but" onclick="addToBasket('Cup cakes',80)">+</button></div>
+                </div>
+            </div>
+            <div class="product slide">
+                <div>
+                    <img onclick= "showProductDetails('lemonbars')" class="product-pic" src="WebsitePics/lemon bars.jpg">
+                </div>
+                <div>
+                    <p class="product-name">Lemon Bars</p>
+                    <p class="product-text"> Refresh with our tangy lemon bars.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">150da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('lemon bars')">-</button><button class="buy-but" onclick="addToBasket('lemon bars',150)">+</button></div>
+                </div>
+            </div>
+            <div class="product slide" >
+                <div>
+                    <img onclick= "showProductDetails('chocolatelava')" class="product-pic" src="WebsitePics/chocolate lava .jpg">
+                </div>
+                <div>
+                    <p class="product-name">Chocolate Lava</p>
+                    <p class="product-text">Dive into our velvety chocolate lava cakes.</p>
+                </div>
+                <div class="sale-info">
+                    <div class="product-price"><p class="price">100da</p></div>
+                    <div class="purchase"><button class="buy-but" onclick="removeFromBasket('chocolate lava')">-</button><button class="buy-but" onclick="addToBasket('chocolate lava',100)">+</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="nextprev-container">
+        <button class="nextprevbtn" id="prevbtn">previous</button>
+        <button class="nextprevbtn" id="nextbtn">next</button>
+        </div>
+    </section>
+    <div id="basket" class="baskett">
+        <button class="basket-reset-but" id="resetButton" onclick="resetBasket()"><img class="basket-exit-img" src="WebsitePics/exit button.png"></button>
+        <h3>Basket</h3>
+        <ul id="basket-items">
+            
+        </ul>
+        <p class="basket-text">Total Price: <span id="total-price">$0</span></p>
+    </div>
+    <div class="wrapper">
+            <div class="container">
+                <!--first slide-->
+                    <input class="inputs" type="radio" name="slide" id="c1">
+                    <label for="c1" class="card">
+                        <div class="row">
+                            <div class="icon">1</div>
+                            <div class="description">
+                                <h4><a href="salties.html">salties</a></h4>
+                                <p>savor the savory goodness od our delectable creations</p>
+                            </div>
+                        </div>
+                    </label>
+                <!--second slide-->
+                <input class="inputs" type="radio" name="slide" id="c2">
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                        <div class="description">
+                            <h4><a href="baked.html">baked</a></h4>
+                            <p>experience the warmth and comfort of freshly baked treats</p>
+                        </div>
+                    </div>
+                </label>
+                <!--third slide-->
+                <input class="inputs" type="radio" name="slide" id="c3">
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                        <div class="description">
+                            <h4><a href="cakes.html">cakes</a></h4>
+                            <p>celebrate life's moment with our exquisite cakes, baked to perfection</p>
+                        </div>
+                    </div>
+                </label>
+                <!--fourth slide-->
+                <input class="inputs" type="radio" name="slide" id="c4">
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">4</div>
+                        <div class="description">
+                            <h4><a href="custom.html">custom ?</a></h4>
+                            <p>bring your vision to life with our bespoke creations tailored just for you</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="product-details" id="cookie-details">
+            <div class="exit-detail-img-cont"><img onclick="hideProductDetails('cookie-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+            <img class="detail-pic" src="WebsitePics/cookiespic.jpg">
+            <h2 class="detail-text">Cookies's Nutrition Per 100g</h2>
+            <p class="detail-info">Calories: 400cal</p>
+            <p class="detail-info">Total Fat: 20g</p>
+            <p class="detail-info">Protein 5g</p>
+            <p class="detail-info">Total Carbohydrate 50 g</p>
+        </div>
+        <div class="product-details" id="donut-details">
+            <div class="exit-detail-img-cont"><img onclick="hideProductDetails('donut-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+            <img class="detail-pic" src="WebsitePics/donutpic.jpg">
+            <h2 class="detail-text">Donut's Nutrition Per 100g</h2>
+            <p class="detail-info">Calories: 350kcal</p>
+            <p class="detail-info">Total Fat: 15g</p>
+            <p class="detail-info">Protein 4g</p>
+            <p class="detail-info">Total Carbohydrate 45g</p>
+        </div>
+        <div class="product-details" id="brownie-details">
+            <div class="exit-detail-img-cont"><img onclick="hideProductDetails('brownie-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+            <img class="detail-pic" src="WebsitePics/brownies.jpg">
+            <h2 class="detail-text">Brownies's Nutrition Per 100g</h2>
+            <p class="detail-info">Calories: 380</p>
+            <p class="detail-info">Total Fat: 10g</p>
+            <p class="detail-info">Protein: 5g</p>
+            <p class="detail-info">Total Carbohydrate: 45g</p>
+        </div>
+        <div class="product-details" id="muffin-details">
+            <div class="exit-detail-img-cont"><img onclick="hideProductDetails('muffin-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+            <img class="detail-pic" src="WebsitePics/muffins.jpg">
+            <h2 class="detail-text">Muffins's Nutrition Per 100g</h2>
+            <p class="detail-info">Calories: 300</p>
+            <p class="detail-info">Total Fat: 10g</p>
+            <p class="detail-info">Protein 5g</p>
+            <p class="detail-info">Total Carbohydrate  g</p>
+        </div>
+        <div class="product-details" id="eclair-details">
+            <div class="exit-detail-img-cont"><img onclick="hideProductDetails('eclair-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+            <img class="detail-pic" src="WebsitePics/éclair pic.jpg">
+            <h2 class="detail-text">Eclair's Nutrition Per 100g</h2>
+            <p class="detail-info">Calories: 250</p>
+            <p class="detail-info">Total Fat: 15g</p>
+            <p class="detail-info">Protein 4 g</p>
+            <p class="detail-info">Total Carbohydrate 30 g</p>
+        </div>
+        <div class="product-details" id="cinnamonbun-details">
+            <div class="exit-detail-img-cont"><img onclick="hideProductDetails('cinnamonbun-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+            <img class="detail-pic" src="WebsitePics/cinnamon buns.jpg">
+            <h2 class="detail-text">cinnamonbun's Nutrition Per 100g</h2>
+            <p class="detail-info">Calories: 320</p>
+            <p class="detail-info">Total Fat: 12g</p>
+            <p class="detail-info">Protein 3 g</p>
+            <p class="detail-info">Total Carbohydrate 40 g</p>
+        </div>
+        <div class="product-details" id="chocolateball-details">
+            <div class="exit-detail-img-cont"><img onclick="hideProductDetails('chocolateball-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+            <img class="detail-pic" src="WebsitePics/chocolate balls.jpg">
+            <h2 class="detail-text">chocolate ball's Nutrition Per 100g</h2>
+            <p class="detail-info">Calories: 420</p>
+            <p class="detail-info">Total Fat: 25g</p>
+            <p class="detail-info">Protein 6 g</p>
+            <p class="detail-info">Total Carbohydrate 40 g</p>
+        </div>
+        <div class="product-details" id="fruittart-details">
+            <div class="exit-detail-img-cont"><img onclick="hideProductDetails('fruittart-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+            <img class="detail-pic" src="WebsitePics/fruit tart.jpg">
+            <h2 class="detail-text">fruit trats's Nutrition Per 100g</h2>
+            <p class="detail-info">Calories: 280</p>
+            <p class="detail-info">Total Fat: 10g</p>
+            <p class="detail-info">Protein 3 g</p>
+            <p class="detail-info">Total Carbohydrate 35 g</p>
+        </div>
+        <div class="product-details" id="macaron-details">
+            <div class="exit-detail-img-cont"><img onclick="hideProductDetails('macaron-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+            <img class="detail-pic" src="WebsitePics/macarons-stacked.jpg">
+            <h2 class="detail-text">macaron's Nutrition Per 100g</h2>
+            <p class="detail-info">Calories: 380</p>
+            <p class="detail-info">Total Fat: 20g</p>
+            <p class="detail-info">Protein 5 g</p>
+            <p class="detail-info">Total Carbohydrate 40 g</p>
+        </div>
+        <div class="product-details" id="cupcake-details">
+            <div class="exit-detail-img-cont"><img onclick="hideProductDetails('cupcake-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+            <img class="detail-pic" src="WebsitePics/cupcakes.jpg">
+            <h2 class="detail-text">cupcake's Nutrition Per 100g</h2>
+            <p class="detail-info">Calories: 350</p>
+            <p class="detail-info">Total Fat: 18g</p>
+            <p class="detail-info">Protein 4 g</p>
+            <p class="detail-info">Total Carbohydrate 45 g</p>
+        </div>
+        <div class="product-details" id="lemonbars-details">
+            <div class="exit-detail-img-cont"><img onclick="hideProductDetails('lemonbars-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+            <img class="detail-pic" src="WebsitePics/chocolate lava .jpg">
+            <img class="detail-pic" src="WebsitePics/lemon bars.jpg">
+            <h2 class="detail-text">lemon bars's Nutrition Per 100g</h2>
+            <p class="detail-info">Calories: 320</p>
+            <p class="detail-info">Total Fat: 15g</p>
+            <p class="detail-info">Protein 3 g</p>
+            <p class="detail-info">Total Carbohydrate 35 g</p>
+        </div>
+        <div class="product-details" id="chocolatelava-details">
+            <div class="exit-detail-img-cont"><img onclick="hideProductDetails('chocolatelava-details')" class="exit-img" src="WebsitePics/exit button.png"></div>
+            <img class="detail-pic" src="WebsitePics/chocolate lava .jpg">
+            <h2 class="detail-text">chocolatelava's Nutrition Per 100g</h2>
+            <p class="detail-info">Calories: 450</p>
+            <p class="detail-info">Total Fat: 30g</p>
+            <p class="detail-info">Protein 3 g</p> 
+            <p class="detail-info">Total Carbohydrate 40 g</p>
+        </div>
+    <script src="logs.js"></script>
+    <script src="theme.js"></script>
+    <script src="shop.js"></script>
+</body>
+</html>
